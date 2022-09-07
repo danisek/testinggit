@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="keyword" content="bla bla">
+	<meta name="description" content="Testing html">
+	<meta name="author" content="Daniel Sekoni">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="dwttest.css">
+	<script type="text/javascript" src="dwtest.js" defer="true"></script>
+	<script type="text/javascript" src="jspractice.js" defer="true"></script>
+	
+	<!--<base href="????" target="_blank">-->
+	<title>anything</title>
+	
+	<style>
+		table, th, td{border: 1px solid blue;}
+		.flt{
+			float: left;
+			margin: 10px;
+			font-family: verdana;
+			font-size: 20px;
+			text-align: right;
+			color: white;
+			margin: 40px;
+
+		}
+	</style>
+</head>
+<body>
+	<nav style="background-color: black; height: 100px; width: 100%;">
+	<ul style="padding-left: 340px; list-style-type: none;
+">
+		<li class="flt"><a href="#here" style="text-decoration: none; color: inherit;">Investment |</a></li>
+		<li class="flt">Coding |</li>
+		<li class="flt">Leadership |</li>
+		<li class="flt">Six Sigma </li>
+	</ul></nav>
+	<br><br><br>
+	<table>
+		<caption>Daniel Person Table</caption>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+
+			<tr>
+				<td>Daniel</td>
+				<td>Sekoni</td>
+				<td>adiosekoni@adio.com</td>
+			</tr>
+	</table><br>
+
+	<button onclick= "fn_demo()">win</button>
+	<p id="demo"></p>
+
+	<script>
+		function fn_demo() {
+			var varry = prompt("Enter a url: ", "http://") ;
+			var nameit = prompt("Enter link name: ")
+			let gerr = `<a href="${varry}"> ${nameit}</a>`;
+ 			document.getElementById('demo').innerHTML=gerr;
+ 		}
+	
+
+    //document.getElementById('demo').innerHTML= drawWinston;	
+	</script><br>
+
+	<div style="background-color: yellowgreen; width: 20%; display: inline-block;"><ul>
+		<li>Bed</li>
+		<li>Mattress</li>
+		<li>Pillow</li>
+	</ul></div>
+
+	<div style="background-color: gray; width: 20%; display: inline-block;"><ol>
+		<li>Spoon</li>
+		<li>Fork</li>
+		<li>Knife</li>
+	</ol></div><br><hr>
+
+	<form>
+		<label for="planes" >Choose a plane brand:</label>
+		<select id="plane" name="planes">
+		<option value="boeing">Boeing</option>
+		<option value="airbus">Airbus</option>
+		<option value="embraer">Embraer</option>
+	</select>
+	</form><br>
+
+	<fieldset>
+		<legend style="color: red;"><b>Place something</b></legend>
+		<form action="ttt.php">
+		<label for="houses">Mansion address: </label>
+		<input type="text" id="houses" name="houses"><br>
+		<label for="hotel" name="hotel">Hotel address: </label>
+		<input type="text" id="hotel" name="hotel">
+	</form>
+	</fieldset><hr>
+	<p>When you click in the box below, the color changes to:&nbsp;<span id="clrchng"></span></p>
+	<canvas style="background-color: brown; border-style: 2px solid black; height: 200px; width: 300px" id="myCanvas"></canvas>
+	<script>
+			
+			document.getElementById("myCanvas").addEventListener("click", function(){
+				const danArray=[0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
+				let coluors ="#"
+				for (let i=0; i<6; i++){
+					coluors+=danArray[Math.floor(Math.random()*danArray.length)]
+					//return coluors
+			var paint = document.getElementById("myCanvas");
+			var p = paint.getContext("2d");
+			p.rect(20,20,100,100);
+			p.fillStyle=coluors;
+			p.fill();
+			p.stroke();
+			document.getElementById("clrchng").innerHTML=`<b>${coluors}</b>`
+			document.getElementById("clrchng").style.color=coluors
+				}//console.log(coluors)
+			})
+	</script>
+
+	<video width="300px" height="auto" controls>
+		<source src="Big Data.mp4" type="video/mp4">
+			"your browser aint supporting this shit bra"
+	</video>
+	<object data="https://wwww.amazon.com"></object>
+	<embed src="/Users/danielsekoni/Documents/Schools/Warwick Business School/Modules/Presentation Templates/2-0329-Text-Box-Process-PGo-16_9.pptx"><hr>
+
+		<section>
+			<h3>People Entered</h3>
+			<p id="increaseCount">0</p>
+			<p id="totalCtd"></p>
+			<span id="thumbs"></span>
+
+
+			<button style="margin-bottom: 10px;" onclick="counter()">Counter</button>
+			<button style="margin-bottom: 10px;" onclick="saveCount()">Save</button>
+			<button style="margin-bottom: 10px;" onclick="reset()">Reset</button>
+
+		</section><hr>
+
+		<section>
+			<label for="number1" >F_num</label>
+			<input style="margin-bottom: 5px; width: 40px;" type="number" id="number1" name="number1" placeholder="0"><br>
+			<label for="number2">S_num</label>	
+			<input style="margin-bottom: 10px; width: 40px;" type="number" id="number2" name="number2" placeholder=0><br>
+
+			<button style="margin-bottom: 10px; background-color: yellowgreen;" onclick="add()">Add</button>
+			<button style="margin-bottom: 10px; background-color: skyblue;" onclick="multiply()">Multiply</button>
+			<button style="margin-bottom: 10px; background-color: orange;" onclick="divide()">Divide</button>
+			<button style="margin-bottom: 10px; background-color: azure;" onclick="subtract()">Subtract</button>
+			<p style="margin-top: 5px;">Result:&nbsp<span id="result"></span></p>
+					
+		</section><hr>
+
+		<main class ="containerMain">
+		<div class="divback">
+			<p class="divmsg">Blackjack</p>
+			<p id="startbutton" >Do you want to play?</p>
+			<p>Cards:&nbsp;<span id="cardsDrn"></span></p>
+			<p style="color: blue"; hidden id="show">New Card:&nbsp;<span id="CardNew"></span></p>
+			<p>Sum:&nbsp;<span id="cardSum"></span></p>
+			<button onclick="startbtn()">START GAME</button><br>
+			<button hidden id="newcardBtn" onclick="newCard()">NEW CARD</button>
+		</div>
+		<div class="divback" style="background-color: darkcyan;">
+		<button id="lngbtns">add button</button>
+		<p id="testa"></p>
+	</div>
+		<section id="secbody" onclick="mouseover()">
+			<div >
+				
+			</div>
+		</section>
+		</main>
+
+		<hr>
+			<div class="divback2">
+				<input type="text" name="inputel" id="inputel">
+				<button id="inputBtn">SAVE INPUT</button><br>
+				<ul id="sitesList"></ul>
+			</div>
+		
+		
+
+	<hr><footer style="background-color: lightcyan;">
+		<address>
+		Daniel Sekoni<br>
+		76 Lechmere Avenue<br>
+		IG8 8QG<br>
+		07999065375 <br>
+		<a href=mailto:danielsekoni@gmail.com>email me</a>
+		</address>
+	</footer>
+
+</body>
+</html>
